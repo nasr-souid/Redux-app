@@ -1,18 +1,24 @@
-import React from 'react'
-import {useSelector} from 'react-redux'
-import './App.css'
-import TaskList from './Components/TaskList';
-
+import "./App.css";
+import React from "react";
+import AddTask from "./Component/AddTask/AddTask";
+import ListTask from "./Component/ListTask/ListTask";
 
 function App() {
-    const state = useSelector((state) => ({...state}));
     return (
         <div className="App">
-            <TaskList/>
-
+            <div
+                style={{
+                    height: "20px",
+                    width: "654px",
+                    backgroundColor: "#ffffff",
+                    position: "fixed",
+                    top: "0px",
+                }}
+            ></div>
+            <AddTask />
+            <ListTask />
         </div>
-    )
+    );
 }
 
-export default App
-
+export default App;
